@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using GlobalContracts.Interfaces;
 using Microsoft.Azure.Mobile.Server;
 
 namespace TeeScoreService.DataObjects
 {
-    public class VenueFacility: EntityData
+    public class VenueFacilities : EntityData, IVenueFacilities
     {
         public string VenueId { get; set; }
         public string FacilityId { get; set; }

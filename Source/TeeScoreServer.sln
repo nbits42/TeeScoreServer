@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeeScoreService", "TeeScoreService\TeeScoreService.csproj", "{209FA716-A7AD-4095-BD70-C8710FC66FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalContracts", "GlobalContracts\GlobalContracts.csproj", "{E90D4827-112B-4BC4-859B-06C5CAE1D55B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{209FA716-A7AD-4095-BD70-C8710FC66FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{209FA716-A7AD-4095-BD70-C8710FC66FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{209FA716-A7AD-4095-BD70-C8710FC66FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90D4827-112B-4BC4-859B-06C5CAE1D55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90D4827-112B-4BC4-859B-06C5CAE1D55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90D4827-112B-4BC4-859B-06C5CAE1D55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90D4827-112B-4BC4-859B-06C5CAE1D55B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B6A7EF5-7DEA-4F4C-9F53-D2CEF2719B9E}
 	EndGlobalSection
 EndGlobal

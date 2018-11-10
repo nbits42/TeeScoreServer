@@ -1,4 +1,4 @@
-﻿namespace TeeScoreService.Contracts
+﻿namespace GlobalContracts.Enumerations
 {
     public enum FacilityType
     {

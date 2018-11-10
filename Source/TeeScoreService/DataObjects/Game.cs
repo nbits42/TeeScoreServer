@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using GlobalContracts.Enumerations;
+using GlobalContracts.Interfaces;
 using Microsoft.Azure.Mobile.Server;
-using TeeScoreService.Contracts;
+
+
 
 namespace TeeScoreService.DataObjects
 {
-    public class Game: EntityData
+    public class Game : EntityData, IGame
     {
         public DateTime Date { get; set; }
         public GameStatus GameStatus { get; set; }
@@ -22,4 +25,6 @@ namespace TeeScoreService.DataObjects
         [ForeignKey("VenueId")]
         public Venue Venue { get; set; }
     }
+
+    
 }

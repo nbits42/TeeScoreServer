@@ -9,37 +9,37 @@ using TeeScoreService.Models;
 
 namespace TeeScoreService.Controllers
 {
-    public class VenueFacilityController : TableController<VenueFacility>
+    public class VenueFacilityController : TableController<VenueFacilities>
     {
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
             TeeScoreContext context = new TeeScoreContext();
-            DomainManager = new EntityDomainManager<VenueFacility>(context, Request);
+            DomainManager = new EntityDomainManager<VenueFacilities>(context, Request);
         }
 
         // GET tables/VenueFacility
-        public IQueryable<VenueFacility> GetAllVenueFacility()
+        public IQueryable<VenueFacilities> GetAllVenueFacility()
         {
             return Query(); 
         }
 
         // GET tables/VenueFacility/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public SingleResult<VenueFacility> GetVenueFacility(string id)
+        public SingleResult<VenueFacilities> GetVenueFacility(string id)
         {
             return Lookup(id);
         }
 
         // PATCH tables/VenueFacility/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<VenueFacility> PatchVenueFacility(string id, Delta<VenueFacility> patch)
+        public Task<VenueFacilities> PatchVenueFacility(string id, Delta<VenueFacilities> patch)
         {
              return UpdateAsync(id, patch);
         }
 
         // POST tables/VenueFacility
-        public async Task<IHttpActionResult> PostVenueFacility(VenueFacility item)
+        public async Task<IHttpActionResult> PostVenueFacility(VenueFacilities item)
         {
-            VenueFacility current = await InsertAsync(item);
+            VenueFacilities current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 

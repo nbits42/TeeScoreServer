@@ -22,13 +22,15 @@ namespace TeeScoreService.Models
         {
         }
 
-        public DbSet<TodoItem> TodoItems { get; set; }
         public DbSet<Game> Games { get; set; }
         public DbSet<Venue> Venues { get; set; }
-        public DbSet<VenueFacility> VenueFacilities { get; set; }
+        public DbSet<VenueFacilities> VenueFacilities { get; set; }
         public DbSet<Facility> Facilities { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<GamePlayer> GamePlayers { get; set; }
+        public DbSet<AvailabilityPeriod> AvailabilityPeriods { get; set; }
+        public DbSet<Availability> Availabilities { get; set; }
+        public DbSet<VenueAvailabilityPeriod> VenueAvailabilityPeriods { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

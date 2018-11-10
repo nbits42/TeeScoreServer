@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TeeScoreService</RootNamespace>
     <AssemblyName>TeeScoreService</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
@@ -24,6 +24,7 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <Use64BitIISExpress />
     <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -120,6 +121,7 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.3.0\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
@@ -135,6 +137,10 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
@@ -143,7 +149,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Net.Http" />
     <Reference Include="Microsoft.CSharp" />
@@ -161,9 +166,11 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Tracing.5.2.6\lib\net45\System.Web.Http.Tracing.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Contracts\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
@@ -171,19 +178,17 @@
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\GamePlayerController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
-    <Compile Include="Controllers\TodoItemController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\VenueController.cs" />
     <Compile Include="Controllers\VenueFacilityController.cs" />
+    <Compile Include="DataObjects\Availability.cs" />
+    <Compile Include="DataObjects\AvailabilityPeriod.cs" />
     <Compile Include="DataObjects\Facility.cs" />
-    <Compile Include="Contracts\FacilityType.cs" />
     <Compile Include="DataObjects\Game.cs" />
-    <Compile Include="Contracts\GameType.cs" />
-    <Compile Include="Contracts\GameStatus.cs" />
     <Compile Include="DataObjects\GamePlayer.cs" />
     <Compile Include="DataObjects\Player.cs" />
-    <Compile Include="DataObjects\TodoItem.cs" />
     <Compile Include="DataObjects\Venue.cs" />
+    <Compile Include="DataObjects\VenueAvailabilityPeriod.cs" />
     <Compile Include="DataObjects\VenueFacilities.cs" />
     <Compile Include="Migrations\201811071521498_InitialCreate.cs" />
     <Compile Include="Migrations\201811071521498_InitialCreate.Designer.cs">
@@ -192,6 +197,10 @@
     <Compile Include="Migrations\201811071602376_version_0.0.cs" />
     <Compile Include="Migrations\201811071602376_version_0.0.Designer.cs">
       <DependentUpon>201811071602376_version_0.0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811100949052_availability.cs" />
+    <Compile Include="Migrations\201811100949052_availability.Designer.cs">
+      <DependentUpon>201811100949052_availability.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\TeeScoreContext.cs" />
@@ -225,6 +234,15 @@
     <EmbeddedResource Include="Migrations\201811071602376_version_0.0.resx">
       <DependentUpon>201811071602376_version_0.0.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811100949052_availability.resx">
+      <DependentUpon>201811100949052_availability.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalContracts\GlobalContracts.csproj">
+      <Project>{e90d4827-112b-4bc4-859b-06c5cae1d55b}</Project>
+      <Name>GlobalContracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
