@@ -167,9 +167,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
+    <Compile Include="Controllers\FacilityController.cs" />
     <Compile Include="Controllers\GameController.cs" />
+    <Compile Include="Controllers\GamePlayerController.cs" />
+    <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\VenueController.cs" />
+    <Compile Include="Controllers\VenueFacilityController.cs" />
     <Compile Include="DataObjects\Facility.cs" />
     <Compile Include="Contracts\FacilityType.cs" />
     <Compile Include="DataObjects\Game.cs" />
