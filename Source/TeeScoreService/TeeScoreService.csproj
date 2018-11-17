@@ -186,7 +186,9 @@
     <Compile Include="DataObjects\Facility.cs" />
     <Compile Include="DataObjects\Game.cs" />
     <Compile Include="DataObjects\GamePlayer.cs" />
+    <Compile Include="DataObjects\Hole.cs" />
     <Compile Include="DataObjects\Player.cs" />
+    <Compile Include="DataObjects\Score.cs" />
     <Compile Include="DataObjects\Venue.cs" />
     <Compile Include="DataObjects\VenueAvailabilityPeriod.cs" />
     <Compile Include="DataObjects\VenueFacilities.cs" />
@@ -226,6 +228,8 @@
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\TeeScore - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\TeeScore - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201811071521498_InitialCreate.resx">

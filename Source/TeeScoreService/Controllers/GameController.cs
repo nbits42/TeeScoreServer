@@ -19,7 +19,7 @@ namespace TeeScoreService.Controllers
         }
 
         // GET tables/Game
-        public IQueryable<Game> GetAllGame()
+        public IQueryable<Game> GetAllGames()
         {
             return Query(); 
         }

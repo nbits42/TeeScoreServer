@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\GlobalContracts\Enumerations\FacilityType.cs" Link="Enumerations\FacilityType.cs" />
+    <Compile Include="..\GlobalContracts\Enumerations\GameStatus.cs" Link="Enumerations\GameStatus.cs" />
+    <Compile Include="..\GlobalContracts\Enumerations\GameType.cs" Link="Enumerations\GameType.cs" />
+    <Compile Include="..\GlobalContracts\Enumerations\WeekDay.cs" Link="Enumerations\WeekDay.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IAvailability.cs" Link="Interfaces\IAvailability.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IAvailabilityPeriod.cs" Link="Interfaces\IAvailabilityPeriod.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IEntityData.cs" Link="Interfaces\IEntityData.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IFacility.cs" Link="Interfaces\IFacility.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IGame.cs" Link="Interfaces\IGame.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IGamePlayer.cs" Link="Interfaces\IGamePlayer.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IHole.cs" Link="Interfaces\IHole.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IPlayer.cs" Link="Interfaces\IPlayer.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IScore.cs" Link="Interfaces\IScore.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IVenue.cs" Link="Interfaces\IVenue.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IVenueAvailabilityPeriod.cs" Link="Interfaces\IVenueAvailabilityPeriod.cs" />
+    <Compile Include="..\GlobalContracts\Interfaces\IVenueFacilities.cs" Link="Interfaces\IVenueFacilities.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Enumerations\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="cd &quot;$(SolutionDir)&quot;&#xD;&#xA;cd ..\..\&#xD;&#xA;md TeeScoreReferencedAssemblies&#xD;&#xA;copy &quot;$(TargetPath)&quot; TeeScoreReferencedAssemblies&#xD;&#xA;" />
+  </Target>
+
+</Project>

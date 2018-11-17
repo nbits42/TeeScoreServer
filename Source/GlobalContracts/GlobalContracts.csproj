@@ -46,7 +46,9 @@
     <Compile Include="Interfaces\IFacility.cs" />
     <Compile Include="Interfaces\IGame.cs" />
     <Compile Include="Interfaces\IGamePlayer.cs" />
+    <Compile Include="Interfaces\IHole.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="Interfaces\IScore.cs" />
     <Compile Include="Interfaces\IVenue.cs" />
     <Compile Include="Interfaces\IVenueAvailabilityPeriod.cs" />
     <Compile Include="Interfaces\IVenueFacilities.cs" />
