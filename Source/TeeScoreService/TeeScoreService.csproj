@@ -204,6 +204,10 @@
     <Compile Include="Migrations\201811100949052_availability.Designer.cs">
       <DependentUpon>201811100949052_availability.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811181023299_GameStartEnd.cs" />
+    <Compile Include="Migrations\201811181023299_GameStartEnd.Designer.cs">
+      <DependentUpon>201811181023299_GameStartEnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\TeeScoreContext.cs" />
     <Compile Include="Startup.cs" />
@@ -240,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811100949052_availability.resx">
       <DependentUpon>201811100949052_availability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811181023299_GameStartEnd.resx">
+      <DependentUpon>201811181023299_GameStartEnd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

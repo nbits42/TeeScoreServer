@@ -2,8 +2,12 @@
 {
     public enum GameStatus
     {
+        New,
+        Creating,
         StartingUp,
         InvitiationsSent,
+        ConfirmationsReceiving,
+        ConfirmationsComplete,
         InvitiationReceived,
         Started,
         Paused,

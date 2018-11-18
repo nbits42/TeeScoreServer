@@ -19,6 +19,10 @@ namespace TeeScoreService.DataObjects
         public int InvitedPlayersCount { get; set; }
         public int ConnectedPlayersCount { get; set; }
         public int TeeCount { get; set; }
+        public int StartTee { get; set; }
+        public int CurrentTee { get; set; }
+        public DateTime? StartedAt { get; set; }
+        public DateTime? FinishedAt { get; set; }
         public string VenueId { get; set; }
         public int InvitationNumber { get; set; }
 
