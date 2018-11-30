@@ -39,6 +39,7 @@
     <Compile Include="Enumerations\FacilityType.cs" />
     <Compile Include="Enumerations\GameStatus.cs" />
     <Compile Include="Enumerations\GameType.cs" />
+    <Compile Include="Enumerations\PlayerSelection.cs" />
     <Compile Include="Enumerations\WeekDay.cs" />
     <Compile Include="Interfaces\IAvailability.cs" />
     <Compile Include="Interfaces\IAvailabilityPeriod.cs" />

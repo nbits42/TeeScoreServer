@@ -17,5 +17,6 @@ namespace GlobalContracts.Interfaces
         DateTime? StartedAt { get; set; }
         DateTime? FinishedAt { get; set; }
         string VenueId { get; set; }
+        PlayerSelection PlayerSelection { get; set; }
     }
 }

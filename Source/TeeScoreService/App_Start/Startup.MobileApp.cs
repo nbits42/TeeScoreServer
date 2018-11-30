@@ -7,8 +7,9 @@ using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Authentication;
 using Microsoft.Azure.Mobile.Server.Config;
 using TeeScoreService.DataObjects;
-using TeeScoreService.Models;
 using Owin;
+using TeeScoreService.Models;
+using Configuration = TeeScoreService.Migrations.Configuration;
 
 namespace TeeScoreService
 {
@@ -26,7 +27,8 @@ namespace TeeScoreService
                 .ApplyTo(config);
 
             // Use Entity Framework Code First to create database tables based on your DbContext
-            Database.SetInitializer(new TeeScoreInitializer());
+            //Database.SetInitializer(new TeeScoreInitializer());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TeeScoreContext, Configuration>());
 
             // To prevent Entity Framework from modifying your database schema, use a null database initializer
             // Database.SetInitializer<TeeScoreContext>(null);
@@ -46,25 +48,6 @@ namespace TeeScoreService
                 });
             }
             app.UseWebApi(config);
-        }
-    }
-
-    public class TeeScoreInitializer : CreateDatabaseIfNotExists<TeeScoreContext>
-    {
-        protected override void Seed(TeeScoreContext context)
-        {
-            //List<TodoItem> todoItems = new List<TodoItem>
-            //{
-            //    new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-            //    new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
-            //};
-
-            //foreach (TodoItem todoItem in todoItems)
-            //{
-            //    context.Set<TodoItem>().Add(todoItem);
-            //}
-
-            base.Seed(context);
         }
     }
 }

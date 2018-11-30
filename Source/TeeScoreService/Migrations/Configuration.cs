@@ -9,7 +9,7 @@ namespace TeeScoreService.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "TeeScoreService.Models.TeeScoreContext";
         }
 

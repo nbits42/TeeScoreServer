@@ -24,6 +24,7 @@ namespace TeeScoreService.DataObjects
         public DateTime? StartedAt { get; set; }
         public DateTime? FinishedAt { get; set; }
         public string VenueId { get; set; }
+        public PlayerSelection PlayerSelection { get; set; }
         public int InvitationNumber { get; set; }
 
         [ForeignKey("VenueId")]
