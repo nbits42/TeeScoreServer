@@ -8,5 +8,6 @@ namespace GlobalContracts.Interfaces
     public interface IEntityData
     {
         string Id { get; set; }
+        DateTimeOffset? CreatedAt { get; set; }
     }
 }

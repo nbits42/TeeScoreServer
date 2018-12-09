@@ -6,7 +6,7 @@ namespace GlobalContracts.Interfaces
     public interface IGame: IEntityData
     {
         int ConnectedPlayersCount { get; set; }
-        DateTime Date { get; set; }
+        DateTime GameDate { get; set; }
         GameStatus GameStatus { get; set; }
         GameType GameType { get; set; }
         int InvitationNumber { get; set; }
@@ -14,9 +14,11 @@ namespace GlobalContracts.Interfaces
         int TeeCount { get; set; }
         int StartTee { get; set; }
         int CurrentTee { get; set; }
-        DateTime? StartedAt { get; set; }
-        DateTime? FinishedAt { get; set; }
+        DateTime StartedAt { get; set; }
+        DateTime FinishedAt { get; set; }
         string VenueId { get; set; }
         PlayerSelection PlayerSelection { get; set; }
+        string VenueName { get; set; }
+        string PlayerNames { get; set; }
     }
 }

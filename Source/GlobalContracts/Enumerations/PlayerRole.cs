@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace GlobalContracts.Enumerations
 {
-    public enum PlayerSelection
+    public enum PlayerRole
     {
-        Manual,
-        ByInvitationNumber,
-        ByNfc,
-        ByQrCode
+        Owner,
+        Player
     }
 }

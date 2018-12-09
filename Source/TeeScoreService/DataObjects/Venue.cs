@@ -14,6 +14,7 @@ namespace TeeScoreService.DataObjects
         public double Lat { get; set; }
         public double Long { get; set; }
         public string ThumbnailUrl { get; set; }
+        public string OwnerId { get; set; }
         public string ImageUrl { get; set; }
     }
 }

@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using GlobalContracts.Interfaces;
+using Microsoft.Azure.Mobile.Server;
 
 namespace TeeScoreService.DataObjects
 {
-    public class Hole : IHole
+    public class Tee : EntityData, ITee
     {
         public string GameId { get; set; }
         public string Number { get; set; }

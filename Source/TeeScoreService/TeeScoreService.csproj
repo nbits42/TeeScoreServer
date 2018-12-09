@@ -179,6 +179,8 @@
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\GamePlayerController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
+    <Compile Include="Controllers\ScoreController.cs" />
+    <Compile Include="Controllers\TeeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\VenueController.cs" />
     <Compile Include="Controllers\VenueFacilityController.cs" />
@@ -212,6 +214,18 @@
     <Compile Include="Migrations\201811241453117_GamePlayerSelection.cs" />
     <Compile Include="Migrations\201811241453117_GamePlayerSelection.Designer.cs">
       <DependentUpon>201811241453117_GamePlayerSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812070709367_GamePlayer_Game.cs" />
+    <Compile Include="Migrations\201812070709367_GamePlayer_Game.Designer.cs">
+      <DependentUpon>201812070709367_GamePlayer_Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812080859415_GameOwner_EntityDateCreated.cs" />
+    <Compile Include="Migrations\201812080859415_GameOwner_EntityDateCreated.Designer.cs">
+      <DependentUpon>201812080859415_GameOwner_EntityDateCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812090851002_TeeScore.cs" />
+    <Compile Include="Migrations\201812090851002_TeeScore.Designer.cs">
+      <DependentUpon>201812090851002_TeeScore.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\TeeScoreContext.cs" />
@@ -255,6 +269,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811241453117_GamePlayerSelection.resx">
       <DependentUpon>201811241453117_GamePlayerSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812070709367_GamePlayer_Game.resx">
+      <DependentUpon>201812070709367_GamePlayer_Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812080859415_GameOwner_EntityDateCreated.resx">
+      <DependentUpon>201812080859415_GameOwner_EntityDateCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812090851002_TeeScore.resx">
+      <DependentUpon>201812090851002_TeeScore.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

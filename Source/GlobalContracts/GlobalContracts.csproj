@@ -39,6 +39,7 @@
     <Compile Include="Enumerations\FacilityType.cs" />
     <Compile Include="Enumerations\GameStatus.cs" />
     <Compile Include="Enumerations\GameType.cs" />
+    <Compile Include="Enumerations\PlayerRole.cs" />
     <Compile Include="Enumerations\PlayerSelection.cs" />
     <Compile Include="Enumerations\WeekDay.cs" />
     <Compile Include="Interfaces\IAvailability.cs" />
@@ -47,7 +48,7 @@
     <Compile Include="Interfaces\IFacility.cs" />
     <Compile Include="Interfaces\IGame.cs" />
     <Compile Include="Interfaces\IGamePlayer.cs" />
-    <Compile Include="Interfaces\IHole.cs" />
+    <Compile Include="Interfaces\ITee.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\IScore.cs" />
     <Compile Include="Interfaces\IVenue.cs" />

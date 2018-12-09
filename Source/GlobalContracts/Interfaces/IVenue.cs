@@ -8,5 +8,6 @@
         double Long { get; set; }
         string Name { get; set; }
         string ThumbnailUrl { get; set; }
+        string OwnerId { get; set; }
     }
 }

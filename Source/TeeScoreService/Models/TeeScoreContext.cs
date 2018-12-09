@@ -16,9 +16,9 @@ namespace TeeScoreService.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
 
-        private const string connectionStringName = "Name=MS_TableConnectionString";
+        private const string ConnectionStringName = "Name=MS_TableConnectionString";
 
-        public TeeScoreContext() : base(connectionStringName)
+        public TeeScoreContext() : base(ConnectionStringName)
         {
         }
 
@@ -31,6 +31,8 @@ namespace TeeScoreService.Models
         public DbSet<AvailabilityPeriod> AvailabilityPeriods { get; set; }
         public DbSet<Availability> Availabilities { get; set; }
         public DbSet<VenueAvailabilityPeriod> VenueAvailabilityPeriods { get; set; }
+        public DbSet<Tee> Tees { get; set; }
+        public DbSet<Score> Scores { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

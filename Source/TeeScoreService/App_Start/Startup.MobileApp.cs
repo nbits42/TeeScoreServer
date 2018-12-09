@@ -33,7 +33,7 @@ namespace TeeScoreService
             // To prevent Entity Framework from modifying your database schema, use a null database initializer
             // Database.SetInitializer<TeeScoreContext>(null);
 
-            MobileAppSettingsDictionary settings = config.GetMobileAppSettingsProvider().GetMobileAppSettings();
+            var settings = config.GetMobileAppSettingsProvider().GetMobileAppSettings();
 
             if (string.IsNullOrEmpty(settings.HostName))
             {

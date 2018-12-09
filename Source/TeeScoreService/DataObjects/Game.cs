@@ -13,7 +13,7 @@ namespace TeeScoreService.DataObjects
 {
     public class Game : EntityData, IGame
     {
-        public DateTime Date { get; set; }
+        public DateTime GameDate { get; set; }
         public GameStatus GameStatus { get; set; }
         public GameType GameType { get; set; }
         public int InvitedPlayersCount { get; set; }
@@ -21,11 +21,13 @@ namespace TeeScoreService.DataObjects
         public int TeeCount { get; set; }
         public int StartTee { get; set; }
         public int CurrentTee { get; set; }
-        public DateTime? StartedAt { get; set; }
-        public DateTime? FinishedAt { get; set; }
+        public DateTime StartedAt { get; set; }
+        public DateTime FinishedAt { get; set; }
         public string VenueId { get; set; }
         public PlayerSelection PlayerSelection { get; set; }
         public int InvitationNumber { get; set; }
+        public string VenueName { get; set; }
+        public string PlayerNames { get; set; }
 
         [ForeignKey("VenueId")]
         public Venue Venue { get; set; }
