@@ -3,7 +3,7 @@
     public interface IScore
     {
         string GameId { get; set; }
-        string HoleId { get; set; }
+        string TeeId { get; set; }
         string PlayerId { get; set; }
         int Putts { get; set; }
     }

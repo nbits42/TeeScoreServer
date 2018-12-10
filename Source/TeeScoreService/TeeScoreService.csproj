@@ -189,7 +189,7 @@
     <Compile Include="DataObjects\Facility.cs" />
     <Compile Include="DataObjects\Game.cs" />
     <Compile Include="DataObjects\GamePlayer.cs" />
-    <Compile Include="DataObjects\Hole.cs" />
+    <Compile Include="DataObjects\Tee.cs" />
     <Compile Include="DataObjects\Player.cs" />
     <Compile Include="DataObjects\Score.cs" />
     <Compile Include="DataObjects\Venue.cs" />
@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201812090851002_TeeScore.cs" />
     <Compile Include="Migrations\201812090851002_TeeScore.Designer.cs">
       <DependentUpon>201812090851002_TeeScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812102052009_ScoreRenameTeeId.cs" />
+    <Compile Include="Migrations\201812102052009_ScoreRenameTeeId.Designer.cs">
+      <DependentUpon>201812102052009_ScoreRenameTeeId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\TeeScoreContext.cs" />
@@ -278,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812090851002_TeeScore.resx">
       <DependentUpon>201812090851002_TeeScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812102052009_ScoreRenameTeeId.resx">
+      <DependentUpon>201812102052009_ScoreRenameTeeId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
