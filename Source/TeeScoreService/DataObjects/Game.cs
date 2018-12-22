@@ -28,6 +28,7 @@ namespace TeeScoreService.DataObjects
         public int InvitationNumber { get; set; }
         public string VenueName { get; set; }
         public string PlayerNames { get; set; }
+        public string ScoresJson { get; set; }
 
         [ForeignKey("VenueId")]
         public Venue Venue { get; set; }

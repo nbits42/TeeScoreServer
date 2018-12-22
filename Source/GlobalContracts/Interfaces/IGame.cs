@@ -20,5 +20,6 @@ namespace GlobalContracts.Interfaces
         PlayerSelection PlayerSelection { get; set; }
         string VenueName { get; set; }
         string PlayerNames { get; set; }
+        string ScoresJson { get; set; }
     }
 }

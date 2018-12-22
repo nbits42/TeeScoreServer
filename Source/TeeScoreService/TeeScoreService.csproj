@@ -231,6 +231,10 @@
     <Compile Include="Migrations\201812102052009_ScoreRenameTeeId.Designer.cs">
       <DependentUpon>201812102052009_ScoreRenameTeeId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812221841424_scoresJson.cs" />
+    <Compile Include="Migrations\201812221841424_scoresJson.Designer.cs">
+      <DependentUpon>201812221841424_scoresJson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\TeeScoreContext.cs" />
     <Compile Include="Startup.cs" />
@@ -285,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812102052009_ScoreRenameTeeId.resx">
       <DependentUpon>201812102052009_ScoreRenameTeeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812221841424_scoresJson.resx">
+      <DependentUpon>201812221841424_scoresJson.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
